@@ -16,6 +16,7 @@ The infrastructure created in this project includes:
 * Public Subnet
 * Internet Gateway
 * Route Table
+* Security Group --> Ingress rule and Egress rule
 * EC2 Instance
 
 📊 Basic Flow:
