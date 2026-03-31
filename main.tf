@@ -42,3 +42,55 @@ resource "aws_route_table_association" "Terraweek_association" {
   subnet_id      = aws_subnet.Terraweek-vpc-subnet.id   # Reference your subnet
   route_table_id = aws_route_table.Terraweek-routetable.id  # Reference your route table
 }
+
+resource "aws_security_group" "Terraweek-SG"{
+
+  name        = "Terraweek-SG"
+  description = "Allow SSH AND HTTP traffic"
+  vpc_id      = aws_vpc.Terraweek-vpc.id
+
+# ingress
+
+# SSH (Port 22)
+  ingress {
+    description = "SSH Access"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  # HTTP (Port 80)
+  ingress {
+    description = "HTTP Access"
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  # Allow all outbound
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "Terraweek-SG"
+  }
+
+}
+
+resource "aws_instance" "Terraweek_ec2instance" {
+  ami           = "ami-0931307dcdc2a28c9"
+  instance_type = "t3.micro"
+  subnet_id                   = aws_subnet.Terraweek-vpc-subnet.id
+  vpc_security_group_ids      = [aws_security_group.Terraweek-SG.id]
+  associate_public_ip_address = true
+
+  tags = {
+    Name = "Terraweek-Server"
+  }
+}
