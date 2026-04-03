@@ -84,11 +84,15 @@ resource "aws_security_group" "Terraweek-SG"{
 }
 
 resource "aws_instance" "Terraweek_ec2instance" {
-  ami           = "ami-0931307dcdc2a28c9"
+  ami           = "ami-0a343c133937afdb9"
   instance_type = "t3.micro"
   subnet_id                   = aws_subnet.Terraweek-vpc-subnet.id
   vpc_security_group_ids      = [aws_security_group.Terraweek-SG.id]
   associate_public_ip_address = true
+   
+  lifecycle {
+  create_before_destroy = true
+  }
 
   tags = {
     Name = "Terraweek-Server"
