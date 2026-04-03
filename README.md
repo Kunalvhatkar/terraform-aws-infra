@@ -18,11 +18,12 @@ The infrastructure created in this project includes:
 * Route Table
 * Security Group --> Ingress rule and Egress rule
 * EC2 Instance
+* S3 Bucket
 
 📊 Basic Flow:
 
 ```
-VPC → Subnet → Internet Gateway → Route Table → EC2 Instance
+VPC → Subnet → Internet Gateway → Route Table → EC2 Instance → S3 Bucket 
 ```
 
 ---
@@ -33,6 +34,7 @@ VPC → Subnet → Internet Gateway → Route Table → EC2 Instance
 * AWS (Amazon Web Services)
 * EC2 (Elastic Compute Cloud)
 * VPC (Virtual Private Cloud)
+* S3 (Simple Storage Service)
 
 ---
 
@@ -109,6 +111,7 @@ terraform destroy
 * Automated AWS resource provisioning
 * Clean and simple structure for beginners
 
+
 ---
 
 
@@ -128,6 +131,7 @@ terraform destroy
 * Hands-on experience with AWS infrastructure
 * Basics of networking in AWS (VPC, Subnet, Routing)
 * Writing reusable Terraform configurations
+* Resource Dependency & Execution Order
 
 ---
 
