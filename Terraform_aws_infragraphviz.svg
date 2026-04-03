@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1041pt" height="152pt" viewBox="0.00 0.00 1041.00 152.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 148)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-148 1036.6,-148 1036.6,4 -4,4"/>
+<!-- aws_instance.Terraweek_ec2instance -->
+<g id="node1" class="node">
+<title>aws_instance.Terraweek_ec2instance</title>
+<polygon fill="none" stroke="black" points="684.38,-44 458.1,-44 458.1,-8 684.38,-8 684.38,-44"/>
+<text xml:space="preserve" text-anchor="middle" x="571.24" y="-21.8" font-family="sans-serif" font-size="14.00">aws_instance.Terraweek_ec2instance</text>
+</g>
+<!-- aws_security_group.Terraweek&#45;SG -->
+<g id="node6" class="node">
+<title>aws_security_group.Terraweek-SG</title>
+<polygon fill="none" stroke="black" points="411.62,-36 196.97,-36 196.97,0 411.62,0 411.62,-36"/>
+<text xml:space="preserve" text-anchor="middle" x="304.29" y="-13.8" font-family="sans-serif" font-size="14.00">aws_security_group.Terraweek-SG</text>
+</g>
+<!-- aws_instance.Terraweek_ec2instance&#45;&gt;aws_security_group.Terraweek&#45;SG -->
+<g id="edge1" class="edge">
+<title>aws_instance.Terraweek_ec2instance-&gt;aws_security_group.Terraweek-SG</title>
+<path fill="none" stroke="black" d="M457.88,-22.61C446.46,-22.26 434.83,-21.91 423.34,-21.56"/>
+<polygon fill="black" stroke="black" points="423.54,-18.07 413.44,-21.27 423.33,-25.07 423.54,-18.07"/>
+</g>
+<!-- aws_subnet.Terraweek&#45;vpc&#45;subnet -->
+<g id="node7" class="node">
+<title>aws_subnet.Terraweek-vpc-subnet</title>
+<polygon fill="none" stroke="black" points="409.67,-90 198.91,-90 198.91,-54 409.67,-54 409.67,-90"/>
+<text xml:space="preserve" text-anchor="middle" x="304.29" y="-67.8" font-family="sans-serif" font-size="14.00">aws_subnet.Terraweek-vpc-subnet</text>
+</g>
+<!-- aws_instance.Terraweek_ec2instance&#45;&gt;aws_subnet.Terraweek&#45;vpc&#45;subnet -->
+<g id="edge2" class="edge">
+<title>aws_instance.Terraweek_ec2instance-&gt;aws_subnet.Terraweek-vpc-subnet</title>
+<path fill="none" stroke="black" d="M464,-44.44C449.78,-46.91 435.13,-49.46 420.76,-51.95"/>
+<polygon fill="black" stroke="black" points="420.57,-48.43 411.32,-53.59 421.77,-55.33 420.57,-48.43"/>
+</g>
+<!-- aws_internet_gateway.Terraweek&#45;igw -->
+<g id="node2" class="node">
+<title>aws_internet_gateway.Terraweek-igw</title>
+<polygon fill="none" stroke="black" points="419.38,-144 189.2,-144 189.2,-108 419.38,-108 419.38,-144"/>
+<text xml:space="preserve" text-anchor="middle" x="304.29" y="-121.8" font-family="sans-serif" font-size="14.00">aws_internet_gateway.Terraweek-igw</text>
+</g>
+<!-- aws_vpc.Terraweek&#45;vpc -->
+<g id="node8" class="node">
+<title>aws_vpc.Terraweek-vpc</title>
+<polygon fill="none" stroke="black" points="153.2,-90 0,-90 0,-54 153.2,-54 153.2,-90"/>
+<text xml:space="preserve" text-anchor="middle" x="76.6" y="-67.8" font-family="sans-serif" font-size="14.00">aws_vpc.Terraweek-vpc</text>
+</g>
+<!-- aws_internet_gateway.Terraweek&#45;igw&#45;&gt;aws_vpc.Terraweek&#45;vpc -->
+<g id="edge3" class="edge">
+<title>aws_internet_gateway.Terraweek-igw-&gt;aws_vpc.Terraweek-vpc</title>
+<path fill="none" stroke="black" d="M225.03,-107.53C213.03,-104.69 200.78,-101.77 189.2,-99 181.18,-97.08 172.84,-95.08 164.49,-93.07"/>
+<polygon fill="black" stroke="black" points="165.54,-89.72 155,-90.78 163.9,-96.52 165.54,-89.72"/>
+</g>
+<!-- aws_route_table.Terraweek&#45;routetable -->
+<g id="node3" class="node">
+<title>aws_route_table.Terraweek-routetable</title>
+<polygon fill="none" stroke="black" points="687.1,-142 455.38,-142 455.38,-106 687.1,-106 687.1,-142"/>
+<text xml:space="preserve" text-anchor="middle" x="571.24" y="-119.8" font-family="sans-serif" font-size="14.00">aws_route_table.Terraweek-routetable</text>
+</g>
+<!-- aws_route_table.Terraweek&#45;routetable&#45;&gt;aws_internet_gateway.Terraweek&#45;igw -->
+<g id="edge4" class="edge">
+<title>aws_route_table.Terraweek-routetable-&gt;aws_internet_gateway.Terraweek-igw</title>
+<path fill="none" stroke="black" d="M455.19,-124.87C447.21,-124.93 439.15,-124.99 431.13,-125.05"/>
+<polygon fill="black" stroke="black" points="431.3,-121.55 421.33,-125.12 431.35,-128.55 431.3,-121.55"/>
+</g>
+<!-- aws_route_table_association.Terraweek_association -->
+<g id="node4" class="node">
+<title>aws_route_table_association.Terraweek_association</title>
+<polygon fill="none" stroke="black" points="1032.6,-117 723.1,-117 723.1,-81 1032.6,-81 1032.6,-117"/>
+<text xml:space="preserve" text-anchor="middle" x="877.85" y="-94.8" font-family="sans-serif" font-size="14.00">aws_route_table_association.Terraweek_association</text>
+</g>
+<!-- aws_route_table_association.Terraweek_association&#45;&gt;aws_route_table.Terraweek&#45;routetable -->
+<g id="edge5" class="edge">
+<title>aws_route_table_association.Terraweek_association-&gt;aws_route_table.Terraweek-routetable</title>
+<path fill="none" stroke="black" d="M722.76,-111.65C714.64,-112.31 706.52,-112.98 698.5,-113.64"/>
+<polygon fill="black" stroke="black" points="698.43,-110.13 688.75,-114.44 699,-117.11 698.43,-110.13"/>
+</g>
+<!-- aws_route_table_association.Terraweek_association&#45;&gt;aws_subnet.Terraweek&#45;vpc&#45;subnet -->
+<g id="edge6" class="edge">
+<title>aws_route_table_association.Terraweek_association-&gt;aws_subnet.Terraweek-vpc-subnet</title>
+<path fill="none" stroke="black" d="M722.93,-91.73C627.91,-87.24 507.97,-81.57 421.03,-77.47"/>
+<polygon fill="black" stroke="black" points="421.45,-73.98 411.3,-77.01 421.12,-80.98 421.45,-73.98"/>
+</g>
+<!-- aws_s3_bucket.terraweek&#45;s3bucket -->
+<g id="node5" class="node">
+<title>aws_s3_bucket.terraweek-s3bucket</title>
+<polygon fill="none" stroke="black" points="985.18,-44 770.53,-44 770.53,-8 985.18,-8 985.18,-44"/>
+<text xml:space="preserve" text-anchor="middle" x="877.85" y="-21.8" font-family="sans-serif" font-size="14.00">aws_s3_bucket.terraweek-s3bucket</text>
+</g>
+<!-- aws_s3_bucket.terraweek&#45;s3bucket&#45;&gt;aws_instance.Terraweek_ec2instance -->
+<g id="edge7" class="edge">
+<title>aws_s3_bucket.terraweek-s3bucket-&gt;aws_instance.Terraweek_ec2instance</title>
+<path fill="none" stroke="black" d="M770.31,-26C746.29,-26 720.58,-26 695.92,-26"/>
+<polygon fill="black" stroke="black" points="696.18,-22.5 686.18,-26 696.18,-29.5 696.18,-22.5"/>
+</g>
+<!-- aws_security_group.Terraweek&#45;SG&#45;&gt;aws_vpc.Terraweek&#45;vpc -->
+<g id="edge8" class="edge">
+<title>aws_security_group.Terraweek-SG-&gt;aws_vpc.Terraweek-vpc</title>
+<path fill="none" stroke="black" d="M225.03,-36.47C213.03,-39.31 200.78,-42.23 189.2,-45 181.18,-46.92 172.84,-48.92 164.49,-50.93"/>
+<polygon fill="black" stroke="black" points="163.9,-47.48 155,-53.22 165.54,-54.28 163.9,-47.48"/>
+</g>
+<!-- aws_subnet.Terraweek&#45;vpc&#45;subnet&#45;&gt;aws_vpc.Terraweek&#45;vpc -->
+<g id="edge9" class="edge">
+<title>aws_subnet.Terraweek-vpc-subnet-&gt;aws_vpc.Terraweek-vpc</title>
+<path fill="none" stroke="black" d="M198.71,-72C187.41,-72 176,-72 164.94,-72"/>
+<polygon fill="black" stroke="black" points="165.07,-68.5 155.07,-72 165.07,-75.5 165.07,-68.5"/>
+</g>
+</g>
+</svg>
