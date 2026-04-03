@@ -45,6 +45,7 @@ terraform-aws-infra/
 │── main.tf          # Main infrastructure configuration
 │── provider.tf      # AWS provider configuration
 │── README.md        # Project documentation
+|── Terraform_aws_infragraphviz.svg # Visual Presentation
 ```
 
 ---
