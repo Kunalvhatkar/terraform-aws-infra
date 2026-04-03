@@ -94,3 +94,13 @@ resource "aws_instance" "Terraweek_ec2instance" {
     Name = "Terraweek-Server"
   }
 }
+
+resource "aws_s3_bucket" "terraweek-s3bucket" {
+  bucket = "terraweek-s3bucket"
+  depends_on = [aws_instance.Terraweek_ec2instance]
+
+  tags = {
+    Name = "TerraWeek-S3Bucket"
+    
+  }
+}
